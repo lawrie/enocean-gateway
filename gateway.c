@@ -208,7 +208,7 @@ void gateway()
 			log_msg("Read telegram\n");
 			log_msg("Data length: %d\n", dl);
 			
-            if (dl == 4) d = ((255 - data[2]) / 256) * 400;
+            if (dl == 4) d = ((255 - data[2]) / 256.0) * 400;
             else d = data[0];
 			
 			log_msg("Data: %d\n",d);
